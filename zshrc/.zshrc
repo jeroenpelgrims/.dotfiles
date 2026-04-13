@@ -11,3 +11,5 @@ source $ZSH/oh-my-zsh.sh
 powerline-daemon -q
 . /usr/share/powerline/bindings/zsh/powerline.zsh
 
+# Command aliases
+alias vim="nvim"
