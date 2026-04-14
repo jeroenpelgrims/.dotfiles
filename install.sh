@@ -29,3 +29,11 @@ yay -Sy --noconfirm "${aur_packages[@]}"
 
 # Install dotfiles
 stow */
+
+# Install other things
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Bun
+curl -fsSL https://bun.com/install | bash
+# nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
