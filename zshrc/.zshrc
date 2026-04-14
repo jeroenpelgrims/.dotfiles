@@ -13,3 +13,8 @@ powerline-daemon -q
 
 # Command aliases
 alias vim="nvim"
+
+# bun 
+[ -s "/home/resurge/.bun/_bun" ] && source "/home/resurge/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
