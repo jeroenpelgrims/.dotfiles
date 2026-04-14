@@ -22,3 +22,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/home/resurge/.bun/_bun" ] && source "/home/resurge/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# uv
+. "$HOME/.local/bin/env"

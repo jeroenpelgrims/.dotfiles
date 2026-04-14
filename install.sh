@@ -37,3 +37,5 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl -fsSL https://bun.com/install | bash
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh

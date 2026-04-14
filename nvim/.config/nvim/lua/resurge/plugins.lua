@@ -68,6 +68,6 @@ vim.lsp.config('vtsls', {
 })
 
 require('mason-lspconfig').setup({
-  ensure_installed = { 'vtsls', 'vue_ls', 'rust_analyzer' },
+  ensure_installed = { 'vtsls', 'vue_ls', 'rust_analyzer', 'basedpyright' },
   automatic_enable = true,  -- Auto-runs vim.lsp.enable() for installed servers
 })
