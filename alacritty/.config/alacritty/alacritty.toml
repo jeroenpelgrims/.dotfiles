@@ -8,5 +8,6 @@ bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
 
 [keyboard]
 bindings = [
+	# Make Ctrl+Backspace delete an entire word
 	{ key = "Back", mods = "Control", chars = "\u0017" }
 ]
