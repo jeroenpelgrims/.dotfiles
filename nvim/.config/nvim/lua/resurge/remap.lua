@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>ff", function()
   })
 end, { desc = 'Find files' })
 
+-- LSP stuff
 vim.keymap.set("n", "<leader>?", function() vim.diagnostic.open_float() end, opts)
 vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<S-F12>", vim.lsp.buf.references, { desc = "Go to references" })
+vim.keymap.set('i', '<C-Space>', "<C-x><C-o>", { desc = 'Trigger completion' })
