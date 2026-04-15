@@ -6,6 +6,20 @@ vim.pack.add({
 	}
 })
 
+-- nvim-tree
+vim.pack.add({
+	{
+		src = "https://github.com/nvim-tree/nvim-tree.lua",
+		version = "v1.17.0",
+	},
+	{
+		src = "https://github.com/nvim-tree/nvim-web-devicons",
+		version = "v0.100",
+	}
+})
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+require("nvim-tree").setup()
 
 -- Telescope fuzzy finder
 vim.pack.add({
