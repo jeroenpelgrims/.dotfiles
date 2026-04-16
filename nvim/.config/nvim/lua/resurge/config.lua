@@ -9,3 +9,15 @@ vim.opt.shiftwidth = 2
 
 -- plugin-specific variable for vim-airline
 vim.g.airline_powerline_fonts = 1
+
+-- enable auto formatting on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    vim.lsp.buf.format({ 
+      bufnr = args.buf,
+      async = false  -- synchronous required for BufWritePre
+    })
+  end,
+})
+
