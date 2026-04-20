@@ -10,6 +10,10 @@
       "src": "https://github.com/mason-org/mason.nvim",
       "version": "'v2.2.1'"
     },
+    "molokai": {
+      "rev": "c67bdfcdb31415aa0ade7f8c003261700a885476",
+      "src": "https://github.com/tomasr/molokai"
+    },
     "nvim-lspconfig": {
       "rev": "9bafffaeaae363c5211080e06e04ed5b422fd5ad",
       "src": "https://github.com/neovim/nvim-lspconfig",

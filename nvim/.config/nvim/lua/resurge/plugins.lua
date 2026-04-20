@@ -1,3 +1,9 @@
+-- Color theme 
+vim.pack.add({
+	{ src = "https://github.com/tomasr/molokai" }
+})
+vim.cmd("colorscheme molokai")
+
 -- stdlib for many nvim plugins
 vim.pack.add({
 	{
