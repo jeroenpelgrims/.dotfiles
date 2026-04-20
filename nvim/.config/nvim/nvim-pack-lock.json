@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "everforest": {
+      "rev": "aeef62ee97872d2557d25904d160ec93a4a355f8",
+      "src": "https://github.com/sainnhe/everforest"
+    },
     "mason-lspconfig.nvim": {
       "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim",
