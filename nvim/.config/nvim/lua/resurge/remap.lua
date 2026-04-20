@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
-vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = 'LSP: Rename symbol' })
 vim.keymap.set('n', '<leader>R', ':luafile $MYVIMRC<CR>')
 
 
@@ -33,4 +32,5 @@ vim.keymap.set('i', '<C-Space>', "<C-x><C-o>", { desc = 'Trigger completion' })
 vim.keymap.set('i', '<CR>', function()
   return vim.fn.pumvisible() == 1 and '<C-y>' or '<CR>'
 end, { expr = true })
-
+vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = 'LSP: Find references' }) 
+vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = 'LSP: Rename symbol' })

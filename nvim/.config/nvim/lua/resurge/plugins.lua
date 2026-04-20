@@ -69,6 +69,7 @@ require('mason').setup()
 
 -- Override vtsls to add Vue plugin BEFORE mason-lspconfig enables it
 vim.lsp.config('vtsls', {
+	filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }, 
   settings = {
     vtsls = {
       tsserver = {
