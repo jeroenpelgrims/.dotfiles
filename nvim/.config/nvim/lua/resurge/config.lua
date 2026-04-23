@@ -10,6 +10,9 @@ vim.opt.shiftwidth = 2
 -- plugin-specific variable for vim-airline
 vim.g.airline_powerline_fonts = 1
 
+-- Highlight current line
+vim.opt.cursorline = true
+
 -- enable auto formatting on save
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",

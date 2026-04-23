@@ -24,7 +24,13 @@ vim.pack.add({
 })
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-require("nvim-tree").setup()
+require('nvim-tree').setup({
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+  },
+})
+
 
 -- Telescope fuzzy finder
 vim.pack.add({
@@ -91,6 +97,8 @@ require('mason-lspconfig').setup({
   ensure_installed = { 'vtsls', 'vue_ls', 'rust_analyzer', 'basedpyright' },
   automatic_enable = true,  -- Auto-runs vim.lsp.enable() for installed servers
 })
+
+vim.o.completeopt = "menuone,noselect,fuzzy"
 
 
 -- Auto formatters
