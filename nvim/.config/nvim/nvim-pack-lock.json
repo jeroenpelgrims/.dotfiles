@@ -9,6 +9,10 @@
       "rev": "aeef62ee97872d2557d25904d160ec93a4a355f8",
       "src": "https://github.com/sainnhe/everforest"
     },
+    "git-conflict.nvim": {
+      "rev": "a1badcd070d176172940eb55d9d59029dad1c5a6",
+      "src": "https://github.com/akinsho/git-conflict.nvim"
+    },
     "mason-lspconfig.nvim": {
       "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim",
@@ -19,14 +23,28 @@
       "src": "https://github.com/mason-org/mason.nvim",
       "version": "'v2.2.1'"
     },
+    "mini.map": {
+      "rev": "aa87dcc4b2640a128cf2f2a7400d60a9d8c21d6c",
+      "src": "https://github.com/nvim-mini/mini.map"
+    },
     "molokai": {
       "rev": "c67bdfcdb31415aa0ade7f8c003261700a885476",
       "src": "https://github.com/tomasr/molokai"
+    },
+    "neominimap.nvim": {
+      "rev": "0676085d898019f06044923934e38663f5efa290",
+      "src": "https://github.com/Isrothy/neominimap.nvim",
+      "version": "'v3.16.0'"
     },
     "nvim-lspconfig": {
       "rev": "9bafffaeaae363c5211080e06e04ed5b422fd5ad",
       "src": "https://github.com/neovim/nvim-lspconfig",
       "version": "'v2.8.0'"
+    },
+    "nvim-scrollview": {
+      "rev": "ff8c8b76170f0062aa00f2609b48235e9cc3d131",
+      "src": "https://github.com/dstein64/nvim-scrollview",
+      "version": "'v6.3.0'"
     },
     "nvim-tree.lua": {
       "rev": "85d1145ac71c1b8e1423862c78165a1f609faf60",
@@ -43,10 +61,20 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons",
       "version": "'v0.100'"
     },
+    "opencode.nvim": {
+      "rev": "eb1be3208251a61d4a61fdd5870301003012ce50",
+      "src": "https://github.com/nickjvandyke/opencode.nvim",
+      "version": "'v0.7.0'"
+    },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim",
       "version": "'v0.1.4'"
+    },
+    "snacks.nvim": {
+      "rev": "e6fd58c82f2f3fcddd3fe81703d47d6d48fc7b9f",
+      "src": "https://github.com/folke/snacks.nvim",
+      "version": "'v2.31.0'"
     },
     "telescope-fzf-native.nvim": {
       "rev": "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c",
