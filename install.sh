@@ -2,6 +2,9 @@
 
 # Base packages
 packages=(
+	stow
+	less
+	unzip
 	hyprland
 	hypridle
 	hyprpaper
@@ -16,6 +19,7 @@ packages=(
 	ripgrep
 	neovim
 	git
+	ly
 )
 sudo pacman -Sy --noconfirm "${packages[@]}"
 
@@ -29,6 +33,9 @@ yay -Sy --noconfirm "${aur_packages[@]}"
 
 # Install dotfiles
 stow */
+
+# Enable ly (display manager)
+sudo systemctl enable ly@tty1.service
 
 # Install other things
 # Rust
