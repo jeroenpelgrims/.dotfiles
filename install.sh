@@ -42,7 +42,6 @@ stow */
 sudo systemctl enable ly@tty1.service
 systemctl enable --user syncthing.service
 
-
 # Install other things
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
