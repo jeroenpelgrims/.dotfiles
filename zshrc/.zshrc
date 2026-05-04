@@ -4,7 +4,7 @@ ssh-add ~/.ssh/archtux 2>/dev/null
 
 # Oh-My-Zsh
 export ZSH="/usr/share/oh-my-zsh"
-ZSH_THEME=agnoster
+# ZSH_THEME=agnoster
 source $ZSH/oh-my-zsh.sh
 
 # Setup powerline fonts
