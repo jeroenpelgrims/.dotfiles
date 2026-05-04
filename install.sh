@@ -2,6 +2,7 @@
 
 # Base packages
 packages=(
+	syncthing
 	stow
 	less
 	unzip
@@ -20,6 +21,9 @@ packages=(
 	neovim
 	git
 	ly
+	powerline
+	ttf-jetbrains-mono-nerd
+	keepassxc
 )
 sudo pacman -Sy --noconfirm "${packages[@]}"
 
@@ -34,8 +38,10 @@ yay -Sy --noconfirm "${aur_packages[@]}"
 # Install dotfiles
 stow */
 
-# Enable ly (display manager)
+# Enable services
 sudo systemctl enable ly@tty1.service
+systemctl enable --user syncthing.service
+
 
 # Install other things
 # Rust
