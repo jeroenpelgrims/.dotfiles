@@ -24,6 +24,7 @@ packages=(
 	powerline
 	ttf-jetbrains-mono-nerd
 	keepassxc
+	pulseaudio
 )
 sudo pacman -Sy --noconfirm "${packages[@]}"
 
@@ -41,6 +42,7 @@ stow */
 # Enable services
 sudo systemctl enable ly@tty1.service
 systemctl enable --user syncthing.service
+systemctl enable --user pulseaudio.service
 
 
 # Install other things
