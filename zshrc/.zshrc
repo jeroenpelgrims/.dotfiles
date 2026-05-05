@@ -1,6 +1,9 @@
 # SSH
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-ssh-add ~/.ssh/archtux 2>/dev/null
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s > /dev/null 2>&1)"
+		ssh-add ~/.ssh/archtop > /dev/null 2>&1
+fi
 
 # Oh-My-Zsh
 export ZSH="/usr/share/oh-my-zsh"
