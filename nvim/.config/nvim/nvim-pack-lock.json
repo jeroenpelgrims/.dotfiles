@@ -76,6 +76,11 @@
       "src": "https://github.com/folke/snacks.nvim",
       "version": "'v2.31.0'"
     },
+    "spellwarn.nvim": {
+      "rev": "c98cfca978791cae3edaced7056bd340debee8fe",
+      "src": "https://github.com/ravibrock/spellwarn.nvim",
+      "version": "'main'"
+    },
     "telescope-fzf-native.nvim": {
       "rev": "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c",
       "src": "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
@@ -85,6 +90,11 @@
       "rev": "5255aa27c422de944791318024167ad5d40aad20",
       "src": "https://github.com/nvim-telescope/telescope.nvim",
       "version": "'v0.2.2'"
+    },
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "147af4e49f51dd48f41972de26552872b8ba7b25",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim",
+      "version": "'147af4e49f51dd48f41972de26552872b8ba7b25'"
     }
   }
 }
