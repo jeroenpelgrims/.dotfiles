@@ -1,10 +1,3 @@
-# SSH
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-if [ -z "$SSH_AUTH_SOCK" ]; then
-    eval "$(ssh-agent -s > /dev/null 2>&1)"
-		ssh-add ~/.ssh/archtop > /dev/null 2>&1
-fi
-
 # Oh-My-Zsh
 export ZSH="/usr/share/oh-my-zsh"
 # ZSH_THEME=agnoster
@@ -16,6 +9,7 @@ powerline-daemon -q
 
 # Command aliases
 alias vim="nvim"
+alias ls="ls -lh"
 
 # nvm (node)
 export NVM_DIR="$HOME/.nvm"
@@ -27,3 +21,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # uv
 . "$HOME/.local/bin/env"
+
+source $HOME/export-esp.sh
