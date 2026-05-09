@@ -27,3 +27,5 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+-- reserve fixed space for the diagnostics column
+vim.opt.signcolumn = "yes"
