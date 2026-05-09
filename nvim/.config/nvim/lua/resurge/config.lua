@@ -13,6 +13,9 @@ vim.g.airline_powerline_fonts = 1
 -- Highlight current line
 vim.opt.cursorline = true
 
+-- Copy to system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- enable auto formatting on save
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
