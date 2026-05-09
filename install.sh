@@ -43,6 +43,7 @@ stow */
 sudo systemctl enable ly@tty1.service
 systemctl enable --user syncthing.service
 systemctl enable --user pulseaudio.service
+systemctl --user enable --now ssh-agent
 
 # Install other things
 # Rust
