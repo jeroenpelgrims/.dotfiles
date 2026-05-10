@@ -5,7 +5,11 @@ vim.pack.add({
 vim.opt.spell = true
 vim.opt.spelllang = en
 require("spellwarn").setup({
-	enable = true,
+	-- enable = true,
+	ft_default = false,
+	ft_config = {
+		markdown = true,
+	},
   event = {
   	"CursorHold",
     "InsertLeave",
