@@ -1,7 +1,3 @@
-# SSH
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-ssh-add ~/.ssh/archtux 2>/dev/null
-
 # Oh-My-Zsh
 export ZSH="/usr/share/oh-my-zsh"
 ZSH_THEME=agnoster
@@ -25,3 +21,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # uv
 . "$HOME/.local/bin/env"
+
+source $HOME/export-esp.sh
