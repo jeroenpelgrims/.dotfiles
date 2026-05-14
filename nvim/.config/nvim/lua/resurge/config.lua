@@ -29,3 +29,16 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 -- reserve fixed space for the diagnostics column
 vim.opt.signcolumn = "yes"
+
+-- Make splits open on right and below
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+-- Render whitespace
+vim.opt.list = true
+vim.opt.listchars = {
+	tab = "▸ ",
+	trail = "·",
+	nbsp = "␣",
+	leadmultispace = "│   ",  -- shows │ for every 4 spaces of indentation
+}

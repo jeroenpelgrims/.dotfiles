@@ -19,6 +19,7 @@ require("conform").setup({
     yaml = { "prettier" },
     markdown = { "prettier" },
     html = { "prettier" },
+    python = { "black" }
   },
   -- Auto format on save
   format_on_save = {
