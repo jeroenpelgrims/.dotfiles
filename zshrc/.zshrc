@@ -13,6 +13,7 @@ powerline-daemon -q
 
 # Command aliases
 alias vim="nvim"
+alias ls="ls -lh"
 
 # nvm (node)
 export NVM_DIR="$HOME/.nvm"
