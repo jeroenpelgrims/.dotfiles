@@ -75,6 +75,11 @@
       "src": "https://github.com/nvim-lua/plenary.nvim",
       "version": "'v0.1.4'"
     },
+    "smear-cursor.nvim": {
+      "rev": "c85bdbb25db096fbcf616bc4e1357bd61fe2c199",
+      "src": "https://github.com/sphamba/smear-cursor.nvim",
+      "version": "'v0.6.0'"
+    },
     "snacks.nvim": {
       "rev": "e6fd58c82f2f3fcddd3fe81703d47d6d48fc7b9f",
       "src": "https://github.com/folke/snacks.nvim",
