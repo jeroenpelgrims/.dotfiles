@@ -13,6 +13,9 @@ vim.g.airline_powerline_fonts = 1
 -- Highlight current line
 vim.opt.cursorline = true
 
+-- Copy to system clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- enable auto formatting on save
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
@@ -24,3 +27,18 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+-- reserve fixed space for the diagnostics column
+vim.opt.signcolumn = "yes"
+
+-- Make splits open on right and below
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+-- Render whitespace
+vim.opt.list = true
+vim.opt.listchars = {
+	tab = "▸ ",
+	trail = "·",
+	nbsp = "␣",
+	leadmultispace = "│   ",  -- shows │ for every 4 spaces of indentation
+}

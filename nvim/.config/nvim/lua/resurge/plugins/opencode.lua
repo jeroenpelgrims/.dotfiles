@@ -1,0 +1,56 @@
+-- opencode
+vim.pack.add({
+  { src = "https://github.com/nickjvandyke/opencode.nvim", version = "v0.7.0" },
+  { src = "https://github.com/folke/snacks.nvim", version = "v2.31.0", optional = true },
+})
+-- Configure snacks.nvim (optional dependency)
+local ok, snacks = pcall(require, "snacks")
+if ok then
+  snacks.setup({
+    input = {}, -- Enhances `ask()`
+    picker = { -- Enhances `select()`
+      actions = {
+        opencode_send = function(...) return require("opencode").snacks_picker_send(...) end,
+      },
+      win = {
+        input = {
+          keys = {
+            ["<a-a>"] = { "opencode_send", mode = { "n", "i" } },
+          },
+        },
+      },
+    },
+  })
+end
+-- Configure opencode.nvim
+---@type opencode.Opts
+vim.g.opencode_opts = {
+  -- Your configuration, if any; goto definition on the type or field for details
+}
+vim.o.autoread = true -- Required for `opts.events.reload`
+-- Recommended/example keymaps
+vim.keymap.set({ "n", "x" }, "<C-a>", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "Ask opencode…" })
+vim.keymap.set({ "n", "x" }, "<C-x>", function() require("opencode").select() end, { desc = "Execute opencode action…" })
+vim.keymap.set({ "n", "t" }, "<C-.>", function() require("opencode").toggle() end, { desc = "Toggle opencode" })
+-- vim.keymap.set({ "n", "x" }, "go",  function() return require("opencode").operator("@this ") end, { desc = "Add range to opencode", expr = true })
+vim.keymap.set({ "n", "x" }, "go", function()
+  local mode = vim.fn.mode()
+  local is_visual = mode == "v" or mode == "V" or mode == "\x16" -- char, line, block visual
+
+  if is_visual then
+    -- Visual mode: send selection range via operator
+    return require("opencode").operator("@this ")
+  else
+    -- Normal mode: add entire file reference
+  	return require("opencode").operator("@buffer ")
+	end
+end, { desc = "Add to opencode (selection or file)", expr = true })
+
+-- vim.keymap.set("n", "goo", function() return require("opencode").operator("@this ") .. "_" end, { desc = "Add line to opencode", expr = true })
+vim.keymap.set("n", "<S-C-u>", function() require("opencode").command("session.half.page.up") end,   { desc = "Scroll opencode up" })
+vim.keymap.set("n", "<S-C-d>", function() require("opencode").command("session.half.page.down") end, { desc = "Scroll opencode down" })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- You may want these if you use the opinionated `<C-a>` and `<C-x>` keymaps above — otherwise consider `<leader>o…` (and remove terminal mode from the `toggle` keymap)
+vim.keymap.set("n", "+", "<C-a>", { desc = "Increment under cursor", noremap = true })
+vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement under cursor", noremap = true })

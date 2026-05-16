@@ -2,6 +2,10 @@
 
 # Base packages
 packages=(
+	syncthing
+	stow
+	less
+	unzip
 	hyprland
 	hypridle
 	hyprpaper
@@ -16,6 +20,11 @@ packages=(
 	ripgrep
 	neovim
 	git
+	ly
+	powerline
+	ttf-jetbrains-mono-nerd
+	keepassxc
+	pulseaudio
 )
 sudo pacman -Sy --noconfirm "${packages[@]}"
 
@@ -29,6 +38,12 @@ yay -Sy --noconfirm "${aur_packages[@]}"
 
 # Install dotfiles
 stow */
+
+# Enable services
+sudo systemctl enable ly@tty1.service
+systemctl enable --user syncthing.service
+systemctl enable --user pulseaudio.service
+systemctl --user enable --now ssh-agent
 
 # Install other things
 # Rust
