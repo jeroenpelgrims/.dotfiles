@@ -45,7 +45,6 @@ systemctl enable --user syncthing.service
 systemctl enable --user pulseaudio.service
 systemctl --user enable --now ssh-agent
 
-
 # Install other things
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

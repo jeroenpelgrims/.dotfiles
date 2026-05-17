@@ -27,7 +27,11 @@ end, { desc = 'Find files' })
 -- LSP stuff
 vim.keymap.set("n", "<leader>?", function() vim.diagnostic.open_float() end, opts)
 vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { desc = "Go to definition" })
-vim.keymap.set("n", "<S-F12>", vim.lsp.buf.references, { desc = "Go to references" })
+vim.keymap.set("n", "gD", function()
+	vim.cmd("vsplit")
+	vim.lsp.buf.definition()
+end, { desc = "Go to definition in new window" })
+vim.keymap.set("n", "<C-F12>", vim.lsp.buf.references, { desc = "Go to references" })
 vim.keymap.set('i', '<C-Space>', "<C-x><C-o>", { desc = 'Trigger completion' })
 vim.keymap.set('i', '<CR>', function()
   return vim.fn.pumvisible() == 1 and '<C-y>' or '<CR>'
