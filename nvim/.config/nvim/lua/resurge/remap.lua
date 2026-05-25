@@ -39,3 +39,9 @@ end, { expr = true })
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = 'LSP: Find references' }) 
 vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = 'LSP: Rename symbol' })
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = 'Show type info' })
+
+-- Window moving rebinds
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move to left window" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move to below window" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move to above window" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move to right window" })
