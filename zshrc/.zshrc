@@ -22,4 +22,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # uv
 . "$HOME/.local/bin/env"
 
-source $HOME/export-esp.sh
+export EDITOR="nvim"
