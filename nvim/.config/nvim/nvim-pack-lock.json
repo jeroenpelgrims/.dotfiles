@@ -108,6 +108,11 @@
       "rev": "147af4e49f51dd48f41972de26552872b8ba7b25",
       "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim",
       "version": "'147af4e49f51dd48f41972de26552872b8ba7b25'"
+    },
+    "yazi.nvim": {
+      "rev": "81097571080ce0c5ab9e0311ed8ad03ff080ef47",
+      "src": "https://github.com/mikavilpas/yazi.nvim",
+      "version": "'v13.1.6'"
     }
   }
 }
