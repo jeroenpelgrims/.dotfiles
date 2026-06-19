@@ -23,3 +23,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.local/bin/env"
 
 export EDITOR="nvim"
+
+# opencode
+export PATH=/home/resurge/.opencode/bin:$PATH
