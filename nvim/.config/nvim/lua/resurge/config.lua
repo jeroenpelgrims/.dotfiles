@@ -1,5 +1,6 @@
 -- Enable relative line numbers
 vim.wo.relativenumber = true
+vim.wo.number = true
 
 -- Defines how large a tab is displayed as
 vim.opt.tabstop = 2
