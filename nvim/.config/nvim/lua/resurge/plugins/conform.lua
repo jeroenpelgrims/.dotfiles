@@ -68,7 +68,10 @@ vim.api.nvim_create_autocmd("FileType", {
     "lua"
   },
   callback = function()
-    vim.opt_local.shiftwidth = 2
+    vim.bo.expandtab = true -- Use spaces instead of tabs
+    vim.bo.tabstop = 2 -- How many columns a \t is displayed as
+    vim.bo.shiftwidth = 2 -- How many spaces to use for indentation commands
+    vim.bo.softtabstop = 2
     vim.opt_local.listchars:append({
        tab = "▸ ",
        trail = "·",
