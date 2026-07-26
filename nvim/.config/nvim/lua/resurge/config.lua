@@ -34,11 +34,11 @@ vim.opt.signcolumn = "yes"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Render whitespace
-vim.opt.list = true
-vim.opt.listchars = {
-	tab = "▸ ",
-	trail = "·",
-	nbsp = "␣",
-	leadmultispace = "│   ",  -- shows │ for every 4 spaces of indentation
-}
+-- Render whitespace (Set in plugins/conform.lua now for per-language config)
+-- vim.opt.list = true
+-- vim.opt.listchars = {
+-- 	tab = "▸ ",
+-- 	trail = "·",
+-- 	nbsp = "␣",
+-- 	leadmultispace = "│   ",  -- shows │ for every 4 spaces of indentation
+-- }

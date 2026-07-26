@@ -29,7 +29,50 @@ require("conform").setup({
   -- Ensure prettier finds your config file
   formatters = {
     prettier = {
-      require_cwd = true,  -- Only run if prettier config exists in project
+			-- require_cwd = true,  -- Only run if prettier config exists in project
+      append_args = { "--tab-width", "2", "--use-tabs", "false" },
     },
   },
+})
+
+-- Configure formatting per language
+local set_indent = vim.api.nvim_create_augroup("set_indent", { clear = true })
+vim.opt.list = true
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = set_indent,
+  pattern = { "rust" },
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.listchars:append({
+ 		  tab = "▸ ",
+ 		  trail = "·",
+		  leadmultispace = "│   "
+		})
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = set_indent,
+  pattern = {
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact",
+		"vue",
+		"css",
+		"scss",
+		"json",
+		"yaml",
+		"html",
+		"lua"
+	},
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.listchars:append({
+ 		  tab = "▸ ",
+ 		  trail = "·",
+		  leadmultispace = "│ "
+		})
+  end,
 })
