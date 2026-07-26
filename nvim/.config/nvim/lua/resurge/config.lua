@@ -16,17 +16,6 @@ vim.opt.cursorline = true
 -- Copy to system clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- enable auto formatting on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function(args)
-    vim.lsp.buf.format({ 
-      bufnr = args.buf,
-      async = false  -- synchronous required for BufWritePre
-    })
-  end,
-})
-
 -- reserve fixed space for the diagnostics column
 vim.opt.signcolumn = "yes"
 
@@ -34,11 +23,4 @@ vim.opt.signcolumn = "yes"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Render whitespace (Set in plugins/conform.lua now for per-language config)
--- vim.opt.list = true
--- vim.opt.listchars = {
--- 	tab = "▸ ",
--- 	trail = "·",
--- 	nbsp = "␣",
--- 	leadmultispace = "│   ",  -- shows │ for every 4 spaces of indentation
--- }
+-- For formatting see plugins/conform.lua
