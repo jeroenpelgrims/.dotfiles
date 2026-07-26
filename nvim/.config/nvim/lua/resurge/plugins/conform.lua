@@ -7,7 +7,7 @@ vim.pack.add({
 })
 require("conform").setup({
   formatters_by_ft = {
-		rust = { "rustfmt", lsp_format = "fallback" },
+    rust = { "rustfmt", lsp_format = "fallback" },
     javascript = { "prettier" },
     typescript = { "prettier" },
     javascriptreact = { "prettier" },
@@ -29,7 +29,7 @@ require("conform").setup({
   -- Ensure prettier finds your config file
   formatters = {
     prettier = {
-			-- require_cwd = true,  -- Only run if prettier config exists in project
+      -- require_cwd = true,  -- Only run if prettier config exists in project
       append_args = { "--tab-width", "2", "--use-tabs", "false" },
     },
   },
@@ -45,34 +45,44 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.opt_local.shiftwidth = 4
     vim.opt_local.listchars:append({
- 		  tab = "▸ ",
- 		  trail = "·",
-		  leadmultispace = "│   "
-		})
+       tab = "▸ ",
+       trail = "·",
+      leadmultispace = "│   "
+    })
   end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
   group = set_indent,
   pattern = {
-		"javascript",
-		"typescript",
-		"javascriptreact",
-		"typescriptreact",
-		"vue",
-		"css",
-		"scss",
-		"json",
-		"yaml",
-		"html",
-		"lua"
-	},
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "css",
+    "scss",
+    "json",
+    "yaml",
+    "html",
+    "lua"
+  },
   callback = function()
     vim.opt_local.shiftwidth = 2
     vim.opt_local.listchars:append({
- 		  tab = "▸ ",
- 		  trail = "·",
-		  leadmultispace = "│ "
-		})
+       tab = "▸ ",
+       trail = "·",
+      leadmultispace = "│ "
+    })
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function()
+    vim.bo.expandtab = true
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+    vim.bo.softtabstop = 2
   end,
 })
