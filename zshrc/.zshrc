@@ -26,3 +26,5 @@ export EDITOR="nvim"
 
 # opencode
 export PATH=/home/resurge/.opencode/bin:$PATH
+
+export PATH="$HOME/.proto/bin:$PATH"
