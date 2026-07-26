@@ -89,3 +89,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.softtabstop = 2
   end,
 })
+
+vim.lsp.config("tailwindcss", {
+  settings = {
+    tailwindCSS = {
+      colorDecorators = false,
+    },
+  },
+})
