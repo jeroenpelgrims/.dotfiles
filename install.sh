@@ -54,3 +54,5 @@ curl -fsSL https://bun.com/install | bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 # uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
+# prettier
+bun i -g prettier @tailwindcss/language-server
