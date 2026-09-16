@@ -1,0 +1,10 @@
+{
+  "name": "pi-extensions",
+  "private": true,
+  "dependencies": {
+    "@tintinweb/pi-subagents": "^0.19.0",
+    "pi-mcp-adapter": "^2.34.0",
+    "pi-simplify": "^0.2.3",
+    "pi-web-access": "^0.29.0"
+  }
+}
