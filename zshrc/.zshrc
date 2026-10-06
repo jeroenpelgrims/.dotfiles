@@ -23,8 +23,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.local/bin/env"
 
 export EDITOR="nvim"
-
-# opencode
-export PATH=/home/resurge/.opencode/bin:$PATH
-
-export PATH="$HOME/.proto/bin:$PATH"
+export PROTO_HOME="$HOME/.proto"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
